@@ -1,6 +1,28 @@
 # Introduction
 This small library shows you how to create a basic C++ application with dependencies.
 
+# Project Structure
+## The root CMake file
+This file defines the project, updates submodules, adds other parts of the project as subdirectories and provides the installation rules.
+
+## src/CMakeLists.txt
+This file defines the library target.
+
+## apps/CMakeLists.txt
+Adds all of the apps as subdirectories. This file helps keeping the root CMake file clean.
+
+## docs/CMakeLists.txt
+Defines the documentation target. See the guide in the "references" section for more information.
+
+## tests/CMakeLists.txt
+Defines the test target. See Catch2's documentation (link in the references).
+
+## the extern directory
+This is where we store the project's dependencies, like Catch2.
+
+## the include directory
+Headers storage.
+
 # Build
 ## Configure
 Run this command to configure the project:
@@ -13,12 +35,12 @@ Run this command to configure the project:
 
 Note that this command requires root privilege.
 
-# Test 
+## Test 
 Run the following command to perform tests
 
 ` cmake --build build --target test `
 
-# Options
+## Options
 To disable documentation generation (in case you don't have doxygen installed):
 
 ` -DMATHIC_BUILD_DOCS=OFF `
@@ -38,3 +60,16 @@ I hope this example helps you with CMake, if you have any questions, in case goo
 E-mail: alirashidi127@gmail.com
 
 Telegram, twitter, linkedin: @codenegaar
+
+# References
+[Easy dependency management tutorial](https://foonathan.net/blog/2016/07/07/cmake-dependency-handling.html)
+
+[Modern CMake tutorial](https://cliutils.gitlab.io/modern-cmake/)
+
+[Quick setup to use doxygen with CMake](https://vicrucann.github.io/tutorials/quick-cmake-doxygen/)
+
+[CMake Documentation](https://cmake.org/cmake/help/v3.0)
+
+[Catch2 and its documentation](https://github.com/catchorg/Catch2)
+
+[Basic CMake, part 2: Libraries](https://codingnest.com/basic-cmake-part-2/#fn9)
