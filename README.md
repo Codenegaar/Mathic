@@ -22,6 +22,7 @@ Run the following command to perform tests
 To disable documentation generation (in case you don't have doxygen installed):
 
 ` -DMATHIC_BUILD_DOCS=OFF `
+
 To disable building apps:
 
 ` -DMATHIC_BUILD_APPS=OFF `
